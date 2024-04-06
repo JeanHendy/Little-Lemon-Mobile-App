@@ -1,0 +1,2 @@
+## Little-Lemon-Mobile-App
+GitHub repository for the Little Lemon mobile app. This app serves as a digital interface for Little Lemon, a Mediterranean restaurant, allowing users to explore its offerings
