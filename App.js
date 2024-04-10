@@ -1,20 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ScrollView, FlatList} from "react-native";
-import LittleLemonHeader from "./components/LittleLemonHeader.js";
-import LittleLemonFooter from "./components/LittleLemonFooter.js";
-import MenuItems from "./components/MenuItems.js";
-export default function App() { 
+import { View, StyleSheet } from "react-native";
+
+import LittleLemonHeader from "./components/LittleLemonHeader";
+import LittleLemonFooter from "./components/LittleLemonFooter";
+import MenuItems from "./components/MenuItems";
+
+export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <LittleLemonHeader /> 
-    //   <LittleLemonFooter />
-    // </View>
     <>
-    <View style= {styles.container}>
-      <LittleLemonHeader />
-      <MenuItems />
-      {/* <LittleLemonFooter /> */}
-    </View>
+      <View style={styles.container}>
+        <LittleLemonHeader />
+        <MenuItems />
+      </View>
+      <View style={styles.footerContainer}>
+        <LittleLemonFooter />
+      </View>
     </>
   );
 }
@@ -22,6 +21,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#495E57",
+    backgroundColor: "#333333",
   },
+  footerContainer: { backgroundColor: "#333333" },
 });

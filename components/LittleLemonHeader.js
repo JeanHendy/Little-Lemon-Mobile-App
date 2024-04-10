@@ -10,19 +10,19 @@ export default function LittleLemonHeader() {
   );
 }
 
-const styles = StyleSheet.create( {
-    header: {
-        flex:0.15,
-        backgroundColor: "#F4CE14",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    text: {
-        padding:60,
-        fontSize: 30,
-        color: 'black',
-    },
-    bold: {
-        fontWeight: 'bold',
-    }
-})
+const styles = StyleSheet.create({
+  header: {
+    flex: 0.15,
+    backgroundColor: "#EE9972",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    padding: 60,
+    fontSize: 30,
+    color: "black",
+  },
+  bold: {
+    fontWeight: "bold",
+  },
+});
