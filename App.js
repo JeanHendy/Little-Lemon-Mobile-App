@@ -4,19 +4,25 @@ import LittleLemonFooter from "./components/LittleLemonFooter";
 import MenuItems from "./components/MenuItems";
 import FeedbackForm from "./components/FeedbackForm.js";
 import LoginScreen from "./components/LoginScreen.js";
+import WelcomeScreen from "./components/WelcomeScreen.js";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-
+const Stack = createStackNavigator();
 export default function App() {
   return (
-    <>
-      <View style={styles.container}>
-        <LittleLemonHeader />
-        <LoginScreen />
-      </View>
-      <View style={styles.footerContainer}>
-        <LittleLemonFooter />
-      </View>
-    </>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Login" screenOptions={{headerStyle: {backgroundColor: "#FBDABB"}}}>
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen 
+      options = {{title: "Home"}}
+      name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Menu" component={MenuItems} />
+      <Stack.Screen name="Feedback" component={FeedbackForm} />
+
+    </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

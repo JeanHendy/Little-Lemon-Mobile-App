@@ -51,14 +51,16 @@ const styles = StyleSheet.create({
   headerText: {
     padding: 40,
     fontSize: 30,
-    color: "#EDEFEE",
+    color: "black",
     textAlign: "center",
+    fontWeight: "bold",
   },
   regularText: {
     fontSize: 24,
     padding: 20,
     marginVertical: 8,
-    color: "#EDEFEE",
+    color: "black",
+    fontWeight: "300",
     textAlign: "center",
   },
   inputBox: {
