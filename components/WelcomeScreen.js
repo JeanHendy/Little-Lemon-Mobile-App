@@ -5,20 +5,15 @@ import {
   Text,
   StyleSheet,
   Image,
-  useColorScheme,
+  Pressable,
 } from "react-native";
 
-const WelcomeScreen = () => {
-  const colorScheme = useColorScheme();
-  console.log("Current color scheme:", colorScheme); // Debugging line to check color scheme
-
+const WelcomeScreen = ({ navigation }) => {
+  // Destructure navigation from props
   return (
     <ScrollView
       contentContainerStyle={styles.scrollViewContainer}
-      style={[
-        styles.container,
-        { backgroundColor: colorScheme === "light" ? "#F8F8FF" : "#333333" },
-      ]}
+      style={styles.container}
     >
       <View style={styles.headerWrapper}>
         <Image
@@ -28,9 +23,7 @@ const WelcomeScreen = () => {
           accessible={true}
           accessibilityLabel="Little Lemon Logo"
         />
-        <Text style={styles.headerText}>
-          Your local Mediterranean bistro
-        </Text>
+        <Text style={styles.headerText}>Your local Mediterranean bistro</Text>
       </View>
       <View style={styles.subContainer}>
         <Text style={styles.regularText}>
@@ -38,6 +31,9 @@ const WelcomeScreen = () => {
           and classic cocktails in a lively but casual environment. We would
           love to hear your experience with us!
         </Text>
+        <Pressable onPress={() => navigation.navigate("Menu")}>
+          <Text style={styles.regularText}>View Menu</Text>
+        </Pressable>
       </View>
     </ScrollView>
   );
