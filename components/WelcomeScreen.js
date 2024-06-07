@@ -9,7 +9,6 @@ import {
 } from "react-native";
 
 const WelcomeScreen = ({ navigation }) => {
-  // Destructure navigation from props
   return (
     <ScrollView
       contentContainerStyle={styles.scrollViewContainer}
@@ -31,8 +30,17 @@ const WelcomeScreen = ({ navigation }) => {
           and classic cocktails in a lively but casual environment. We would
           love to hear your experience with us!
         </Text>
-        <Pressable onPress={() => navigation.navigate("Menu")}>
-          <Text style={styles.regularText}>View Menu</Text>
+        <Pressable
+          style={styles.button}
+          onPress={() => navigation.navigate("Menu")}
+        >
+          <Text style={styles.buttonText}>View Menu</Text>
+        </Pressable>
+        <Pressable
+          style={styles.button}
+          onPress={() => navigation.navigate("Subscribe")}
+        >
+          <Text style={styles.buttonText}>Subscribe to Newsletter</Text>
         </Pressable>
       </View>
     </ScrollView>
@@ -69,8 +77,23 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
     margin: 20,
-    fontWeight: "200",
+    fontWeight: "400",
     lineHeight: 35,
+    color: "#495E57",
+  },
+  button: {
+    backgroundColor: "#495E57",
+    padding: 20,
+    borderRadius: 15,
+    margin: 20,
+    width: "50%",
+    alignSelf: "center",
+    width: "70%",
+  },
+  buttonText: {
+    color: "#fff",
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });
 

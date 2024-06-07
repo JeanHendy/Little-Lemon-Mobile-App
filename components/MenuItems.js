@@ -102,7 +102,7 @@ export default MenuItems;
 
 const menuStyles = StyleSheet.create({
   container: {
-    flex: 0.95,
+    flex: 1,
   },
   innerContainer: {
     paddingHorizontal: 40,
@@ -135,13 +135,13 @@ const menuStyles = StyleSheet.create({
     padding: 10,
     marginVertical: 8,
     margin: 40,
-    backgroundColor: "#EDEFEE",
-    borderColor: "#EDEFEE",
+    backgroundColor: "#495E57",
+    borderColor: "#495E57",
     borderWidth: 2,
     borderRadius: 12,
   },
   buttonText: {
-    color: "#333333",
+    color: "#fff",
     textAlign: "center",
     fontSize: 32,
   },
